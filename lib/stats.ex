@@ -1,8 +1,12 @@
-defmodule ElixirStatPractice do
-  alias Stats.CentralTendency.Mean
+defmodule Stats do
+  alias Stats.CentralTendency.{Mean, Median, Mode}
 
   # def population_mean(nums), do: Mean.population_mean(nums)
   defdelegate population_mean(nums), to: Mean
 
   defdelegate sample_mean(nums), to: Mean
+
+  defdelegate median(num_list), to: Median
+
+  defdelegate mode(nums_list), to: Mode
 end
